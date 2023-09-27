@@ -25,3 +25,5 @@ Once we have created our projects ENVIRONMENT we wont recreate it every time we 
         ~source yourprojectenv/bin/activate
 
 --> This is all we need to use our environment, in our project.So everytime we want to access a particular project and run it, we will first activate its environment.
+
+NB: We usually add the virtual environnment folder to our .gitignore, this is because by itself it is bulky.Also because other collaborators will create their own environment.
