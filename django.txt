@@ -1,29 +1,19 @@
-VIRTUAL ENVIRONMENT
- - A django project requires a virtual environment to run locally , virtual environment help different projects within our pc be able to run on different dependency versions.
+CREATING A DJANGO PROJECT
+1. We create a django course project using the command:
+ :\> django-admin startproject projectname
 
- CREATING A VIRTUAL ENVIRONMENT
- -In your project folder, open a git bach terminal
- -To create a virtual env we use the command:
-   python -m env your project env
-In this case 'your project env' will be the name you assign to the environment to be created for your project.This indicates that we add the suffix 'env' at during our projects virtual environment.
-Example: If we have a project named ecommerce env as shown below:
-   ~python -m venv ecommerceenv
-Once we have created our projects ENVIRONMENT we wont recreate it every time we want to run the project we will just be using existing created environment. Also when we create the projects environment a folder is created with the environment
+ Example:
+    :\> django-admin startproject blog
 
- 1.Lib:Contains a list of all dependencies installed to the environment,
- ie every time we install a dependency it is added here.
- 2.Scripts/bin: in windows we have scripts in other operating systems we will have bin.Here we will have an important file named 'activate' which
- we will be using to activate our environment, during the running of your project.We will also python files which we can use as our project interpreter.
-
- -->So creating a virtual environment is not enough, to be able to use it well within our project we must activate it.
-
- ACTIVATING AN ENVIRONMENT
- We use the following command:
-    In windows git bash:
-        ~source yourprojectenv/Scripts/activate
-    in linux:
-        ~source yourprojectenv/bin/activate
-
---> This is all we need to use our environment, in our project.So everytime we want to access a particular project and run it, we will first activate its environment.
-
-NB: We usually add the virtual environnment folder to our .gitignore, this is because by itself it is bulky.Also because other collaborators will create their own environment.
+-When we do this project folder is created with the name blog. Inside it there are two main components:
+ 1. The project's configuration folder, it contains all the configurations needed for the project to run.It also has the same name as the project i.e in this case it is also naed blog
+ 2. A file called manage.py :This is responsible for all commands made within the project.
+ We can use it for:
+        a. Running the seerver: python manage.py runserver
+        b. Creaing an admin: python manage.py createsuperuser
+        c. Making database migrations: python manage.py makemigration
+        d. Migrating database changes: python manage.py migrate
+        e. Collecting static: python manage.py collectstatic
+    -These are just some of the commonly used commands
+    NB: To be able to use these commands we must cd into the projects directory.
+    
